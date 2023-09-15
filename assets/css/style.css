@@ -2,5 +2,64 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+:root{
+    --todo-dark-gray: #b1b1b1;
+    --todo-gray: #d9dbd5;
+    --todo-gray-light: #eaebeb;
+    --todo-gray-ligther: #fbfbfa;
+    --todo-white: white;
+    --todo-sand: #f3eeea;
+    --todo-dark: #000;
+    --todo-sky: #8fdafd;
+    --todo-dark-green: #019689;
+    --todo-green: #d5f9ba;
+    --todo-light-accent: #8edafc;
+}
+body{
+    background-color: var(--todo-gray-light);
+}
+form{   
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
+input{
+    padding: 0.5rem;
+    width: 400px;
+}
+button{
+    padding: 0.5rem;
+}
+
+#app{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1080px;
+}
+
+.title{
+    justify-content: center;
+    align-items: center;
+}
+
+.done{
+    text-decoration: line-through;
+    color: var(--todo-dark-green);
+}
+
+.list_of_task{
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+/* utilities */
+.img-fluid{
+    width: 150px;
+    max-width: 100%;
+}
+.d-flex{
+    display: flex;
+}

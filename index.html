@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vue-todolist</title>
-    <link rel="stylesheet" href="./assets/css/">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
     <div id="app">
-        <div v-for="(task, i) in todo" :id="i">
-            {{task.text}}
+        <div class="wrapper">
+            <div class="d-flex title ">
+                <h1>Todo list</h1>
+        
+                <img class="img-fluid" src="./assets/img/coming_soon.png" alt="">
+
+            </div>
+            
+            <form class="d-flex">
+                <input type="text" >
+                <button @click="addTask" type="submit"> add</button>
+            </form>
+
+            <div class="list_of_task d-flex">
+                <div v-for="(task, i) in todo" :id="i" class="" :class="task.done === true ? 'done' : '' "  >
+                    {{task.text}}
+                </div>
+
+            </div>
+
         </div>
     </div>
 

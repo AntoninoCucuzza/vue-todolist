@@ -18,7 +18,6 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            message: 'ello',
             todo:[
                 {         
                     text: 'fare la spesa',
@@ -31,8 +30,25 @@ createApp({
                 {         
                     text: 'guardare One Piece',
                     done: true,
+                },
+                {
+                    text: 'tornare su lol',
+                    done: false
+                },
+                {
+                    text: 'provare fortnite',
+                    done: false
+                },
+                {
+                    text: 'ordinare la pizza',
+                    done: true
                 }
             ]
         }
+    },
+    methods:{
+        newTask(){
+            
+        },
     }
 }).mount('#app')
