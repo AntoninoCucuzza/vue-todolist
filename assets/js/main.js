@@ -53,16 +53,21 @@ createApp({
     methods:{
         addTask(){
             console.log('we');
-
-            this.todo.push({
-                text: this.newTask,
-                done: false
-            });
+            invalidTask = this.newTask.trim()
+            if (invalidTask) {
+                this.todo.push({
+                    text: this.newTask,
+                    done: false
+                });  
+            }
             
             this.newTask = '';
         },
         removeTask(i){
             this.todo.splice(i, 1);
+        },
+        TaskCompleted(i){
+            this.todo[i].done = !this.todo[i].done
         },
     }
 }).mount('#app')

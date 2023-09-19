@@ -26,7 +26,7 @@
             </form>
 
             <div class="list_of_task d-flex">
-                <div v-for="(task, i) in todo" :id="i" class="" :class="task.done === true ? 'done' : '' "  >
+                <div v-for="(task, i) in todo" :id="i" class="" @click="TaskCompleted(i)" :class="task.done === true ? 'done' : '' "  >
                     {{task.text}}
                     <i class="fa-solid fa-x" @click="removeTask(i)"></i>   
                 </div>
